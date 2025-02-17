@@ -1,6 +1,5 @@
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
-import { DiscordModule } from './discord/discord.module';
 
 @Module({
   imports: [
@@ -8,7 +7,6 @@ import { DiscordModule } from './discord/discord.module';
       isGlobal: true,
       envFilePath:'.env',
     }),
-    DiscordModule.forRootAsync(),
   ],
 })
 export class AppModule {}
