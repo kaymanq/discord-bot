@@ -1,42 +1,63 @@
 {
-  "include": [
-    "./src/**/*.ts"
-  ],
-  "exclude": [
-    "node_modules",
-    "test",
-    "dist",
-    "**/*spec.ts"
-  ],
   "compilerOptions": {
-    "module": "commonjs",
-    "declaration": true,
-    "removeComments": true,
+    "incremental": false,
+    "baseUrl": ".",
+    "target": "ES2022",
+    "module": "NodeNext",
+    "moduleResolution": "NodeNext",
+    "resolveJsonsModule": true,
+    "strict": true,
+    "allowJs": false,
+    "alwaysStrict": true,
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "noUnusedLocals": true,
+    "strictNullChecks": true,
+    "noImplicitReturns": true,
+    "noImplicitOverride": true,
+    "strictFunctionTypes": true,
+    "strictBindCallApply": true,
+    "allowUnreachableCode": false,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": false,
+    "noFallthroughCasesInSwitch": true,
+    "strictBuiltinIteratorReturn": true,
+    "noUncheckedSideEffectImports": true,
+    "useUnknownInCatchVariables": true,
+    "strictPropertyInitialization": true,
+    "noPropertyAccessFromIndexSignature": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
-    "allowSyntheticDefaultImports": true,
-    "target": "es2017",
-    "sourceMap": true,
-    "outDir": "./dist",
-    "baseUrl": "./",
-    "incremental": true,
+    "useDefineForClassFields": true,
     "skipLibCheck": true,
-    "strictNullChecks": false,
-    "noImplicitAny": false,
-    "strictBindCallApply": false,
-    "forceConsistentCasingInFileNames": false,
-    "noFallthroughCasesInSwitch": false,
-    "resolveJsonModule": true,
+    "removeComments": true,
+    "preserveConstEnums": true,
+    "disableSizeLimit": true,
+    "esModuleInterop": true,
+    "isolatedModules": true,
+    "verbatimModuleSyntax": true,
+    "allowSyntheticDefaultImports": true,
+    "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@common": [
-        "src/common"
+      "@src/*": [
+        "./src/*"
       ],
       "@common/*": [
-        "src/common/*"
+        "./src/common/*"
       ],
-      "@env": [
-        "src/env.config"
-      ]
+      "@shared/*": [
+        "./src/shared/*"
+      ],
+      "@modules/*": [
+        "./src/modules/*"
+      ],
     }
-  }
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "tests",
+    "node_modules"
+  ]
 }
