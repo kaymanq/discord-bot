@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "incremental": false,
     "baseUrl": ".",
     "target": "ES2022",
     "module": "NodeNext",
     "moduleResolution": "NodeNext",
-    "resolveJsonsModule": true,
+    "resolveJsonModule": true,
     "strict": true,
     "allowJs": false,
+    "composite": true,
     "alwaysStrict": true,
     "noImplicitAny": true,
     "noImplicitThis": true,
@@ -35,29 +35,22 @@
     "disableSizeLimit": true,
     "esModuleInterop": true,
     "isolatedModules": true,
-    "verbatimModuleSyntax": true,
+    "verbatimModuleSyntax": false,
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "paths": {
-      "@src/*": [
+      "#src/*": [
         "./src/*"
-      ],
-      "@common/*": [
-        "./src/common/*"
-      ],
-      "@shared/*": [
-        "./src/shared/*"
-      ],
-      "@modules/*": [
-        "./src/modules/*"
-      ],
-    }
+      ]
+    },
+    "outDir": "dist"
   },
   "include": [
-    "src"
+    "src",
+    "tests",
+    "server.ts"
   ],
   "exclude": [
-    "tests",
     "node_modules"
   ]
 }
